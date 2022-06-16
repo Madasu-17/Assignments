@@ -1,0 +1,17 @@
+server:
+  port: 8585
+spring:
+  datasource:
+    password: Temp1234
+    url: jdbc:mysql://localhost:3306/newdatabase
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+     hibernate:
+      format-sql: true
+      
+      
+      
