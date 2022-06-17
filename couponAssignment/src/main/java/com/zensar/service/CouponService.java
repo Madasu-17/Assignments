@@ -10,9 +10,11 @@ import com.zensar.entity.Coupon;
 public interface CouponService {
 	
 	public CouponDto getCoupon(int couponId);
-	public List<CouponDto> getAllCoupons();
+	public List<CouponDto> getAllCoupons(int pageNuber, int pageSize);
 	public void updateCouponId(int couponId, CouponDto couponDto);
 	public CouponDto insertCoupon(CouponDto couponDto);
 	public void deleteCoupon(int couponId);
-	
+	List<CouponDto>getByCouponCode(String couponCode);
+	List<CouponDto> getByCouponIdAndCouponCode(int couponId, String couponCode);
+	List<CouponDto> getBycouponExpityDate(String couponExpityDate);
 }
