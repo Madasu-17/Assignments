@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<context:annotation-config></context:annotation-config>
+	<bean id="employee" class="com.zensar.bean.Employee">
+		<property name="employeeId" value="101"></property>
+		<property name="employeeName" value="Rahul"></property>
+		<property name="employeeSalary" value="25000"></property>
+		<!--<property name="depDetails" ref="department"></property>-->
+	</bean>
+	
+	<bean id="department" class="com.zensar.bean.Department">
+		<property name="departmentId" value="01"></property>
+		<property name="departmantName" value="IT"></property>
+	</bean>
+	<bean id="depDetails" class="com.zensar.bean.Department">
+		<property name="departmentId" value="02"></property>
+		<property name="departmantName" value="Finance"></property>
+	</bean>
+</beans>
+
